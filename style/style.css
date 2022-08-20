@@ -1,0 +1,125 @@
+/* initials starts here */
+/* 
+the design: 
+
+header -> nav 
+
+main -> sections with full screen width -> wrappers
+
+
+the sections will be for backgrounds only and wrappers to center things in the screen when you zoom out.
+
+footer -> links and stuff
+
+
+
+
+*/
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-size: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-size: inherit;
+  background: none;
+  border: none;
+}
+/* initials ends here */
+
+/* TODO: will create the 3 columns for that graphic line all along the page */
+body {
+}
+/* body ends here */
+
+/* header starts here */
+header {
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+
+/* header ends here */
+
+/* main starts here */
+main {
+
+}
+/* main ends here */
+
+
+/* section1 starts here */
+.section1 {
+}
+/* section1 ends here */
+
+/* Section2 starts here */
+.section2 {
+
+}
+/* Section2 ends here */
+
+/* Section3 starts here */
+.section3 {
+
+}
+/* Section3 ends here */
+
+/* Section4 starts here */
+.section4 {
+
+}
+/* Section4 ends here */
+
+/* Section5 starts here */
+.section5 {
+
+}
+/* Section 5 ends here */
+
+/* Section6 starts here */
+.section6 {
+
+}
+/* Section6 ends here */
+
+/* Section7 starts here */
+.section7 {
+
+}
+/* Section7 ends here */
+
+/* Section8 starts here */
+.section8 {
+
+}
+/* Section8 ends here */
+
+/* Footer starts here */
+footer {
+
+}
+/* Footer ends here */
+
+/* Section9 starts here */
+.section9 {
+
+}
+/* Section9 ends here */
