@@ -39,31 +39,82 @@ button {
   background: none;
   border: none;
 }
-/* initials ends here */
+
+img {
+  width: 100%;
+  height: 100%;
+}
+/* Initials ends here */
+
+/* Utility classes here */
+
+img-it__contain {
+  object-fit: contain;
+}
+
+img-it__cover {
+  object-fit: cover;
+}
+
+img-it__fill {
+  object-fit: fill;
+}
 
 /* TODO: will create the 3 columns for that graphic line all along the page */
 body {
 }
-/* body ends here */
+/* Body ends here */
+
+/* Animation background starts here */
+/* TODO: Copy the animation from stripeV1 */
+.animation {
+  position: absolute;
+  width: 90%;
+  height: 70vh;
+  background-color: bisque;
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 100% calc(), 0 100%);
+  margin-bottom: -20vw;
+}
+/* Animation background ends here */
 
 /* header starts here */
 header {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 nav {
   display: flex;
-  gap: 2rem;
 }
 
+.navbar-list {
+  display: flex;
+  gap: 7rem;
+}
+
+.navbar-list > li:first-child > div.logo {
+  width: 8rem;
+  height: 4rem;
+  background-color: red;
+}
+
+.navbar-list__inner {
+  display: flex;
+  gap: 2rem;
+}
 
 /* header ends here */
 
 /* main starts here */
 main {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
 }
 /* main ends here */
-
 
 /* section1 starts here */
 .section1 {
@@ -72,54 +123,45 @@ main {
 
 /* Section2 starts here */
 .section2 {
-
 }
 /* Section2 ends here */
 
 /* Section3 starts here */
 .section3 {
-
 }
 /* Section3 ends here */
 
 /* Section4 starts here */
 .section4 {
-
 }
 /* Section4 ends here */
 
 /* Section5 starts here */
 .section5 {
-
 }
 /* Section 5 ends here */
 
 /* Section6 starts here */
 .section6 {
-
 }
 /* Section6 ends here */
 
 /* Section7 starts here */
 .section7 {
-
 }
 /* Section7 ends here */
 
 /* Section8 starts here */
 .section8 {
-
 }
 /* Section8 ends here */
 
 /* Footer starts here */
 footer {
-
 }
 /* Footer ends here */
 
 /* Section9 starts here */
 .section9 {
-
 }
 /* Section9 ends here */
