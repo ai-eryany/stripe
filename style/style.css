@@ -15,19 +15,44 @@ footer -> links and stuff
 
 
 */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   font-size: 62.5%;
+  --font-family: "Inter", sans-serif;
+  --font-color-1: rgb(17, 20, 57);
+  --font-color-1-hover: rgba(17, 20, 57, 0.5);
+  --font-color-2: #425466;
+  --font-color-white: white;
+  --transition--duration-regular: 300ms;
+  --border-radius--buttons: 3rem;
+  --buttons-padding: 0.5em 1.7em;
+  --full-parent-width: 100%;
+  --full-parent-height: 100%;
+  --sec3-font-family: "Inter";
+  --sec3-white-color: #fff;
+  --sec3-purple-color: #5f5bfe;
+  --sec3-dark-color: #002640;
+  --sec3-text-color: #3b5566;
+  --sec3-background-color: #f5f9fc;
+  --sec3-transition-duration-normal: 300ms;
+  --sec4-blue-color: #00d7ff;
+  --sec4-text-color: #a8becc;
+  --footer-dark-color: #0e2943;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: var(--font-family);
 }
 
 a {
+  display: block;
   font-size: inherit;
   text-decoration: none;
+  transition-duration: var(--transition--duration-regular);
 }
 
 ul {
@@ -40,28 +65,77 @@ button {
   border: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 img {
-  width: 100%;
-  height: 100%;
+  width: var(--full-parent-width);
+  height: var(--full-parent-height);
 }
 /* Initials ends here */
 
 /* Utility classes here */
 
-img-it__contain {
+.img-it__contain {
   object-fit: contain;
 }
 
-img-it__cover {
+.img-it__cover {
   object-fit: cover;
 }
 
-img-it__fill {
+.img-it__fill {
   object-fit: fill;
+}
+
+.contain-it {
+  width: fit-content;
+  height: fit-content;
+}
+
+.opacity-it:hover {
+  opacity: 0.5;
+}
+
+.curser-it:hover {
+  cursor: pointer;
+}
+
+.quick-position {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* animation keyframes for buttons */
+
+.arrow-after:hover:after {
+  content: "";
+  position: absolute;
+  animation-name: arrow;
+  animation-duration: 50ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes arrow {
+  0% {
+    content: ">";
+    right: 1rem;
+  }
+
+  100% {
+    content: "->";
+    right: 0.5rem;
+  }
 }
 
 /* TODO: will create the 3 columns for that graphic line all along the page */
 body {
+  font-size: 1.6rem;
 }
 /* Body ends here */
 
@@ -69,55 +143,201 @@ body {
 /* TODO: Copy the animation from stripeV1 */
 .animation {
   position: absolute;
-  width: 90%;
-  height: 70vh;
-  background-color: bisque;
+  width: var(--full-parent-width);
+  height: 50rem;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
   z-index: -1;
-  clip-path: polygon(0 0, 100% 0, 100% calc(), 0 100%);
-  margin-bottom: -20vw;
+  clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
+  animation: gradient 20s ease infinite;
 }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+} 
 /* Animation background ends here */
 
 /* header starts here */
 header {
-  font-size: 2rem;
+  width: var(--full-parent-width);
+  height: 10rem;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
+/* nav works as a wrapper for the navbar */
 nav {
+  width: 100rem;
   display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar-list {
+  width: var(--full-parent-width);
   display: flex;
-  gap: 7rem;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.navbar-list > li:first-child > div.logo {
-  width: 8rem;
-  height: 4rem;
-  background-color: red;
+.navbar-list * {
+  color: var(--font-color-white);
 }
 
-.navbar-list__inner {
+.navbar-list li:last-child button {
+  padding: var(--buttons-padding);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius--buttons);
+  transition-duration: var(--transition--duration-regular);
+}
+
+.navbar-list li:last-child button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-list div.logo {
+  width: 6rem;
+  height: 3rem;
+  transition-duration: var(--transition--duration-regular);
+}
+
+.navbar-list__inner-list {
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
+}
+
+.navbar-list__inner-list a:hover {
+  opacity: 0.5;
 }
 
 /* header ends here */
 
 /* main starts here */
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2vh;
 }
 /* main ends here */
 
 /* section1 starts here */
 .section1 {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+/* div flexbox for section1 items*/
+.section1-wrapper-inner {
+  max-width: 100rem;
+  display: flex;
+  margin: auto;
+}
+
+/* div flex item 1 */
+.section1-inner__text {
+  align-self: center;
+  display: flex;
+  height: 60rem;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* h1 */
+.section1-inner__text--title {
+  letter-spacing: -1px;
+  grid-area: 1 / 1 / span 1 / span 1;
+  width: max-content;
+  font-size: 7rem;
+  font-weight: 1000;
+  display: flex;
+  flex-direction: column;
+  /* background-clip: text; */
+  color: rgb(17, 20, 57, 0.8);
+  align-self: end;
+}
+
+/* p */
+.section1-inner__text--description {
+  grid-area: 2 / 1 / span 1 / span 1;
+  color: var(--font-color-2);
+  align-self: end;
+}
+
+/* div */
+.section1-inner__text--button-wrapper {
+  grid-area: 3 / 1 / span 1 / span 1;
+  display: flex;
+  width: var(--full-parent-width);
+  gap: 1em;
+  align-self: start;
+}
+
+.section1-inner__text--button-wrapper button:first-child {
+  padding: var(--buttons-padding);
+  color: var(--font-color-white);
+  background-color: var(--font-color-1);
+  border-radius: var(--border-radius--buttons);
+  transition-duration: var(--transition--duration-regular);
+}
+
+.section1-inner__text--button-wrapper button:first-child:hover {
+  background-color: var(--font-color-1-hover);
+}
+
+
+.section1-inner__text--button-wrapper button:last-child {
+  padding: var(--buttons-padding);
+  color: var(--font-color-1);
+  background-color: transparent;
+}
+
+.section1-inner__text--button-wrapper button:last-child:hover {
+  color: var(--font-color-2);
+  background-color: transparent;
+  transition-duration: var(--transition--duration-regular);
+}
+
+/* div flex item 2 */
+.section1-inner__img {
+  position: relative;
+  left: 30rem;
+}
+
+/* div with half of the image width */
+.section1-inner__phone {
+  position: absolute;
+  bottom: 0;
+  translate: -20% -5%;
+  width: calc(581px / 2);
+  height: calc(1190px / 2);
+  z-index: 1;
+}
+
+/* img  581x1190*/
+.section1-inner__phone--img {
+  border-radius: 4rem;
+}
+
+/* div */
+.section1-inner__desktop {
+  width: calc(1201px / 1.1);
+  height: calc(817px / 1.1);
+}
+
+/* img 1201x817 */
+.section1-inner__desktop--img {
+  border-radius: 1rem;
 }
 /* section1 ends here */
 
