@@ -73,6 +73,8 @@ img {
   width: var(--full-parent-width);
   height: var(--full-parent-height);
 }
+
+
 /* --------------------------------initials ends here-------------------------- */
 /* 
 
@@ -194,6 +196,15 @@ nav {
   z-index: 3;
 }
 
+.circle {
+  display: none;
+  width: 5rem;
+  height: 5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 100%;
+  cursor: pointer;
+}
+
 .navbar-list {
   width: var(--full-parent-width);
   display: flex;
@@ -261,6 +272,7 @@ main {
 */
 /* --------------------------------Section1 starts here-------------------------- */
 .section1 {
+
   width: 100%;
   display: flex;
   overflow: hidden;
@@ -270,12 +282,14 @@ main {
 
 /* div flexbox for section1 items*/
 .section1-wrapper-inner {
+
   max-width: 100rem;
   height: 80rem;
   display: flex;
   align-items: flex-start;
-  margin: auto;
   z-index: 3;
+  margin: auto;
+  padding: 2rem;
 }
 
 /* div flex item 1 */
@@ -390,29 +404,34 @@ main {
 */
 /* --------------------------------Section2 starts here-------------------------- */
 .section2 {
-  padding: 10rem;
   background-color: white;
+  display: flex;
+
+
 }
 
 .section2-wrapper-inner {
   max-width: 100rem;
   margin: auto;
+  padding: 5rem;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-around;
   gap: 10rem;
 }
 
 .section2-inner-first,
 .section2-inner-second {
+  width: 100%;
   display: flex;
+  /* flex-direction: column; */
   justify-content: space-between;
 }
 
 .section2-inner-first > div,
 .section2-inner-second > div {
-  width: 12rem;
-  height: 6rem;
+  width: 10rem;
+  height: 10rem;
 }
 
 /* --------------------------------Section2 ends here-------------------------- */
@@ -432,6 +451,10 @@ main {
 .section3 {
   background-color: var(--sec3-background-color);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* This one for responsiveness */
@@ -439,8 +462,8 @@ main {
   position: relative;
   font-size: 2rem;
   max-width: fit-content;
-  margin: auto;
-  margin-top: 10rem;
+  margin: 5rem;
+  margin-bottom: 0;
 }
 
 .section3-inner-wrapper > * {
@@ -458,20 +481,12 @@ main {
   font-weight: 500;
 }
 
-/* This one for responsiveness */
 .section3-inner-paragraph {
   display: flex;
   flex-flow: column;
   gap: 2rem;
 }
 
-/* I could have used flex wrap but this is better, because when using flex wrap with margin auto the container will have a huge empty space on the right side waiting to be filled. */
-/* This way is more flexable  */
-@media screen and (min-width: 725px) {
-  .section3-inner-paragraph {
-    flex-flow: row;
-  }
-}
 
 .section3-inner-paragraph__child {
   max-width: 40ch;
@@ -509,7 +524,8 @@ main {
   bottom: 5rem;
   max-width: fit-content;
   height: calc(13 * 70px);
-  margin: auto;
+  padding: 2rem;
+  margin-top: 0;
 }
 
 /* This wrapper contain the divs of images */
@@ -588,11 +604,14 @@ main {
 
 /* --------------------------------Section4 starts here-------------------------- */
 .section4 {
-  /* padding: 20vh 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--sec3-dark-color);
-  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 10%, 100% 0, 100% 80%, 0 100%);
   margin-top: -20vh;
   height: 150rem;
+
 }
 
 .section4-uni {
@@ -600,10 +619,11 @@ main {
 }
 
 .section4-inner {
-  height: 100%;
+  padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 5rem;
 }
 
@@ -756,6 +776,7 @@ main {
   gap: 4rem;
   height: 50%;
   flex-direction: column;
+  padding: 2rem;
 }
 
 .section6-globe {
@@ -855,6 +876,7 @@ main {
   flex-wrap: wrap;
   align-items: center;
   gap: 10rem;
+  padding: 2rem;
 }
 
 .section7-inner__text-wrapper {
@@ -980,6 +1002,7 @@ h6.section7-uni {
   background-color: white;
   display: flex;
   justify-content: center;
+
 }
 
 .arya-topFooter {
@@ -1078,6 +1101,7 @@ h6.section7-uni {
   background-color: var(--sec3-background-color);
   clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
   margin-top: -5%;
+
 }
 
 .footer-wrapper {
@@ -1148,12 +1172,6 @@ h6.section7-uni {
   column-width: 10rem;
 }
 
-/* media query to keep the links layout nice :) */
-@media screen and (min-width: 600px) {
-  .footer-links {
-    column-count: 3;
-  }
-}
 
 /* utility class for divs that contain "ul" for links */
 .footer-container--headlink {
@@ -1210,5 +1228,42 @@ h6.section7-uni {
 
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .section2-wrapper-inner {
+    flex-wrap: nowrap;
+  }
+
+  .section2-inner-first,
+.section2-inner-second {
+  flex-direction: column;
+}
+
+
+  .navbar-list {
+    justify-content: space-around;
+  }
+  .circle {
+    display: block;
+  }
+  
+  .navbar-list > ul:nth-child(2), .navbar-list > li:nth-child(3) {
+    display: none;
+  }
+  
+
+
+
+}
+
+@media screen and (min-width: 600px) {
+  .footer-links {
+    column-count: 3;
+  }
+  .section3-inner-paragraph {
+    flex-flow: row;
   }
 }
