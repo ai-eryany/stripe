@@ -254,8 +254,9 @@ nav {
 
 */
 /* --------------------------------main starts here-------------------------- */
-
+/* to stop the horizontal scrollbar from showing up from unkown reasons */
 main {
+  overflow: hidden;
 }
 
 /* --------------------------------main ends here-------------------------- */
@@ -282,11 +283,9 @@ main {
 
 /* div flexbox for section1 items*/
 .section1-wrapper-inner {
-
   max-width: 100rem;
   height: 80rem;
   display: flex;
-  align-items: flex-start;
   z-index: 3;
   margin: auto;
   padding: 2rem;
@@ -304,14 +303,12 @@ main {
 /* h1 */
 .section1-inner__text--title {
   letter-spacing: -1px;
-  width: max-content;
   font-size: 7rem;
   font-weight: 1000;
   display: flex;
   flex-direction: column;
-  /* background-clip: text; */
+  background-clip: text;
   color: rgb(17, 20, 57, 0.8);
-  align-self: end;
 }
 
 .section1-inner__text--des-but-wrapper {
