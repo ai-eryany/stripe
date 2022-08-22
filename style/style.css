@@ -216,7 +216,7 @@ nav {
   color: var(--font-color-white);
 }
 
-.navbar-list li:last-child button {
+.navbar-list li:nth-child(3) button {
   padding: var(--buttons-padding);
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: var(--border-radius--buttons);
