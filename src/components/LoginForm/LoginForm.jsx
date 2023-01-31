@@ -44,7 +44,10 @@ function LoginForm() {
                     <div className="login__form-field">
                         <div className="login__form-label">
                             <label htmlFor="password">Password</label>
-                            <a href="" className="login__link">
+                            <a
+                                href="https://project-stripe.netlify.app/login"
+                                className="login__link"
+                            >
                                 Forgot your Password?
                             </a>
                         </div>
@@ -81,7 +84,10 @@ function LoginForm() {
                     </div>
 
                     <div className="login__form-link">
-                        <a href="#" className="login__link">
+                        <a
+                            href="https://project-stripe.netlify.app/login"
+                            className="login__link"
+                        >
                             Use single sign-on (SSO) instead
                         </a>
                     </div>
