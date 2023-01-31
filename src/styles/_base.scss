@@ -11,7 +11,7 @@
 }
 
 html {
-    color-scheme: light dark;
+    color-scheme: light;
 }
 
 body {
@@ -32,7 +32,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: inherit;
     font-size: inherit;
 }
 
@@ -45,6 +45,7 @@ img {
 button {
     cursor: pointer;
     font-size: inherit;
+    color: inherit;
     background: none;
     border: none;
 }

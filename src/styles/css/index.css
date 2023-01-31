@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.container {
+  max-width: 1240px;
+  margin: auto;
+}
+
+.btn {
+  color: #fff;
+  padding: 12px 24px;
+  background-image: linear-gradient(45deg, #5651e5 0%, #709dff 100%);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.btn:active {
+  transform: translate(4px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+:root {
+  font-size: 62.5%;
+  --font-family: "Inter", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  font-size: 16px;
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  cursor: pointer;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=index.css.map */
