@@ -31,6 +31,14 @@
   font-weight: 700;
 }
 
+.inline-link {
+  color: #5f5bfe;
+  transition: 300ms;
+}
+.inline-link:hover {
+  color: #002640;
+}
+
 :root {
   font-size: 62.5%;
   --font-family: "Inter", sans-serif;

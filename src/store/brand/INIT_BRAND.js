@@ -40,7 +40,7 @@ const INIT_BRAND = [
     {
         type: 'commerce',
         icon: <BiCopyright className="icon" />,
-        text: 'Stripe, Inc.',
+        text: '2023 Stripe, Inc.',
     },
 ];
 
