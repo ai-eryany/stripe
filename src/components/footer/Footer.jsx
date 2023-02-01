@@ -59,8 +59,8 @@ function Footer() {
                             .map((br) => {
                                 return (
                                     <button key={nanoid()}>
-                                        {br.icon}
-                                        {br.currentLanguage}
+                                        <span>{br.icon}</span>
+                                        <span>{br.currentLanguage}</span>
                                     </button>
                                 );
                             })}
@@ -82,87 +82,91 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className="footer-content__links">
-                    <div className="footer-content-box">
-                        <h2>Products</h2>
-                        <ul className="footer-content__products">
-                            {products.map((product) => {
-                                return (
-                                    <li key={nanoid()}>
-                                        <a href={product.href}>
-                                            {product.name}
-                                        </a>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                    <div className="footer-content-box">
-                        <h2>Solutions</h2>
-                        <ul className="footer-content__solutions">
-                            {solutions.map((solution) => {
-                                return (
-                                    <li key={nanoid()}>
-                                        <a href={solution.href}>
-                                            {' '}
-                                            {solution.name}{' '}
-                                        </a>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                    <div className="footer-content-box">
-                        <h2>Integrations & CustomSolutions </h2>
-                        <ul className="footer-content__customSolutions">
-                            {customSolutions.map((custom) => {
-                                return (
-                                    <li key={nanoid()}>
-                                        <a href={custom.href}>{custom.name}</a>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                    <div className="footer-content-box">
-                        <h2>Developers</h2>
-                        <ul className="footer-content__developers">
-                            {developers.map((developer) => {
-                                return (
-                                    <li key={nanoid()}>
-                                        <a href={developer.href}>
-                                            {developer.name}
-                                        </a>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                    <div className="footer-content-box">
-                        <h2>Resources</h2>
-                        <ul className="footer-content__resources">
-                            {resources.map((resource) => {
-                                return (
-                                    <li key={nanoid()}>
-                                        <a href={resource.href}>
-                                            {resource.name}
-                                        </a>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                    <div className="footer-content-box">
-                        <h2>Company</h2>
-                        <ul className="footer-content__company">
-                            {company.map((co) => {
-                                return (
-                                    <li key={nanoid()}>
-                                        <a href={co.href}>{co.name}</a>
-                                    </li>
-                                );
-                            })}
-                        </ul>
+                <div className="center-links">
+                    <div className="footer-content__links">
+                        <div className="footer-content-box">
+                            <h4>Products</h4>
+                            <ul className="footer-content__products">
+                                {products.map((product) => {
+                                    return (
+                                        <li key={nanoid()}>
+                                            <a href={product.href}>
+                                                {product.name}
+                                            </a>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
+                        <div className="footer-content-box">
+                            <h4>Solutions</h4>
+                            <ul className="footer-content__solutions">
+                                {solutions.map((solution) => {
+                                    return (
+                                        <li key={nanoid()}>
+                                            <a href={solution.href}>
+                                                {' '}
+                                                {solution.name}{' '}
+                                            </a>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
+                        <div className="footer-content-box">
+                            <h4>Integrations & CustomSolutions </h4>
+                            <ul className="footer-content__customSolutions">
+                                {customSolutions.map((custom) => {
+                                    return (
+                                        <li key={nanoid()}>
+                                            <a href={custom.href}>
+                                                {custom.name}
+                                            </a>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
+                        <div className="footer-content-box">
+                            <h4>Developers</h4>
+                            <ul className="footer-content__developers">
+                                {developers.map((developer) => {
+                                    return (
+                                        <li key={nanoid()}>
+                                            <a href={developer.href}>
+                                                {developer.name}
+                                            </a>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
+                        <div className="footer-content-box">
+                            <h4>Resources</h4>
+                            <ul className="footer-content__resources">
+                                {resources.map((resource) => {
+                                    return (
+                                        <li key={nanoid()}>
+                                            <a href={resource.href}>
+                                                {resource.name}
+                                            </a>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
+                        <div className="footer-content-box">
+                            <h4>Company</h4>
+                            <ul className="footer-content__company">
+                                {company.map((co) => {
+                                    return (
+                                        <li key={nanoid()}>
+                                            <a href={co.href}>{co.name}</a>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
