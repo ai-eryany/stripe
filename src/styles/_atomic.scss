@@ -32,3 +32,11 @@
 .bold {
     font-weight: 700;
 }
+
+.inline-link {
+    color: #5f5bfe;
+    transition: 300ms;
+    &:hover {
+        color: #002640;
+    }
+}
