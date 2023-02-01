@@ -1,0 +1,17 @@
+@media only screen and (min-width: 720px) {
+    .footer {
+        &-content {
+            flex-direction: row;
+            justify-content: center;
+            gap: 4rem;
+            &__brand {
+                height: 70rem;
+            }
+
+            &__links {
+                column-count: 3;
+                gap: 5rem;
+            }
+        }
+    }
+}
