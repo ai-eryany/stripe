@@ -1,12 +1,19 @@
+import React from 'react';
+import { FaStripe, FaLocationArrow } from 'react-icons/fa';
+import { BiMessageRounded, BiCopyright } from 'react-icons/bi';
+
+// let's have an exception here, and do some logic and UI mixing. it's not considered mixing
+// it's only some icons.
+
 const INIT_BRAND = [
     {
         type: 'logo',
-        src: '',
+        src: <FaStripe className="icon" />,
     },
     {
         type: 'location',
-        icon: '',
-        currentLocation: '',
+        icon: <FaLocationArrow className="icon" />,
+        currentLocation: 'Romania',
         allCountries: [
             { country: '', flag: '' },
             { country: '', flag: '' },
@@ -18,9 +25,9 @@ const INIT_BRAND = [
         ],
     },
     {
-        type: 'langauge',
-        icon: '',
-        currentLangauge: '',
+        type: 'language',
+        icon: <BiMessageRounded className="icon" />,
+        currentLanguage: 'English',
         allLanguages: [
             { abbr: '', language: '' },
             { abbr: '', language: '' },
@@ -32,8 +39,8 @@ const INIT_BRAND = [
     },
     {
         type: 'commerce',
-        icon: '',
-        text: '',
+        icon: <BiCopyright className="icon" />,
+        text: 'Stripe, Inc.',
     },
 ];
 

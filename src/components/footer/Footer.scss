@@ -1,0 +1,150 @@
+.footer {
+    position: relative;
+    background-color: #f5f9fc;
+
+    &-content {
+        margin-inline: auto;
+        padding-block: 5rem;
+        padding-inline: 1rem;
+        max-width: 1280px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &__brand {
+            padding-inline: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 0.5rem;
+            color: #002640;
+            &-logo {
+                width: 10rem;
+                height: 4rem;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .icon {
+                    width: 7rem;
+                    height: 7rem;
+                    transition: 300ms;
+
+                    &:hover {
+                        opacity: 0.5;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &-location {
+                button {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    width: 100%;
+                    padding: 0.5rem;
+
+                    &:hover {
+                        opacity: 0.9;
+                    }
+                }
+            }
+
+            &-language {
+                button {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    width: 100%;
+                    padding: 0.5rem;
+
+                    &:hover {
+                        opacity: 0.9;
+                    }
+                }
+            }
+
+            &-commerce {
+                margin-top: auto;
+                div {
+                    padding: 0.5rem;
+                    margin-bottom: 2rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                }
+            }
+        }
+
+        .center-links {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__links {
+            // TODO: add the column-width for optimal size.
+            column-count: 2;
+            margin-bottom: 8rem;
+            gap: 2rem;
+        }
+
+        &-box {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            line-height: 2.7rem;
+            break-inside: avoid;
+            color: #002640;
+            h4 {
+                max-width: 200px;
+            }
+            a {
+                transition: 100ms;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        &__products {
+        }
+
+        &__solutions {
+        }
+
+        &__customSolutions {
+        }
+
+        &__developers {
+        }
+
+        &__resources {
+        }
+
+        &__company {
+        }
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .footer {
+        &-content {
+            flex-direction: row;
+            justify-content: center;
+            gap: 4rem;
+            &__brand {
+                height: 70rem;
+            }
+
+            &__links {
+                column-count: 3;
+                gap: 5rem;
+            }
+        }
+    }
+}
