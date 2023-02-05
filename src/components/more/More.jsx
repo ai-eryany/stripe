@@ -19,7 +19,7 @@ function More() {
                     </h2>
                     <p className="more-content-start__des">
                         Explore{' '}
-                        <a href="" className="inline-link">
+                        <a href="#link" className="inline-link">
                             Stripe Payments
                         </a>
                         , or create an account instantly and start accepting
@@ -40,7 +40,7 @@ function More() {
                             Integrated per-transaction pricing with no hidden
                             fees.
                         </p>
-                        <a href="" className="inline-link">
+                        <a href="#link" className="inline-link">
                             Pricing details
                         </a>
                     </div>
@@ -51,7 +51,7 @@ function More() {
                             Get up and running with Stripe in as little as 10
                             minutes.
                         </p>
-                        <a href="" className="inline-link">
+                        <a href="#link" className="inline-link">
                             API reference
                         </a>
                     </div>
