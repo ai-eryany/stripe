@@ -6,12 +6,18 @@
     overflow: hidden;
 }
 
-.background-wrapper {
+.gradient-wrapper {
     position: absolute;
     width: 100%;
     height: var(--animated-bg-height);
     clip-path: polygon(0 0, 100% 0, 100% 30%, 0% 100%);
     z-index: -1;
+    display: grid;
+    place-items: stretch;
+    --gradient-color-1: #ef008f;
+    --gradient-color-2: #6ec3f4;
+    --gradient-color-3: #7038ff;
+    --gradient-color-4: #e2e2e2;
 }
 
 canvas {
