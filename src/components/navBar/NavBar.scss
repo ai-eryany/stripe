@@ -34,16 +34,14 @@
 
     .links {
         position: absolute;
-        top: 0;
-        //right: 1000px;
-        width: 80vw;
-        height: fit-content;
-
+        top: 1rem;
+        width: 95vw;
+        height: 600px;
         display: block;
-        padding: 1rem;
         color: #333;
-        background-color: #fff;
         border-radius: 1rem;
+        background-color: #fff; 
+        z-index: 1;
     }
 
     .links-media {
@@ -55,20 +53,57 @@
     }
 
     .nav-list {
+        height: 100%;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        .list-head {
+            display: flex;
+            justify-content: space-between;
+
+            .logo {
+                color: v.$light-purple;
+                width: 6rem;
+                height: 3rem;
+                .icon {
+                    width: 6rem;
+                    height: 6rem;
+                }
+            }
+
+            .icon {
+                font-size: 2rem;
+            }
+        }
 
         & > li {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 5rem;
-            background-color: pink;
-
-
+            height: 6rem;
+            border-bottom: 1px dashed rgba(209, 209, 224, 0.5);
+            padding: 1rem;
             & > a {
                 width: 100%;
+                color: v.$light-grey;
+                font-size: v.$head-fs;
+                font-weight: v.$head-fw;
+                letter-spacing: v.$head-ls;
+                line-height: v.$head-lh;
+            }
+        }
+
+        .list-btn {
+            margin-top: auto;
+            border: none;
+
+            button {
+                padding: v.$btn-p;
+                font-size: v.$btn-fs;
+                letter-spacing: v.$btn-ls;
+                line-height: v.$btn-lh;
+                border-radius: v.$btn-br;            
+                background-color: v.$light-purple; 
+                color: #fff;
             }
         }
     }
@@ -80,6 +115,11 @@
 
 @media only screen and (min-width: 900px) {
     .navbar {
+
+        .hamburger-icon {
+            display: none;
+        }
+
         .links {
             display: none;
         }
@@ -110,7 +150,7 @@
                 line-height: v.$btn-lh;
                 padding: v.$btn-p;
                 background-color: rgba(240, 240, 245, 0.2);
-                border-radius: 1.6rem;
+                border-radius: v.$btn-br;
             }
         }
     }

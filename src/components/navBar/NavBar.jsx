@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import useBrand from 'store/footer/brand/useBrand';
 import { RxHamburgerMenu } from 'react-icons/rx';
+import {AiOutlineClose} from 'react-icons/ai';
 
 import './NavBar.scss';
 import './Navbar-media.scss';
@@ -8,14 +9,14 @@ import './Navbar-media.scss';
 function NavBar() {
     const [isHamburgerVisible, setIsHamburgerVisible] = useState(false);
     const brand = useBrand((state) => state.brand);
-
+    const logo = brand.filter((br) => br.type === 'logo')[0]?.src;
     const handleHaburgerClick = () => {
         setIsHamburgerVisible((state) => !state);
     };
 
     return (
         <nav className="navbar">
-            <div className="logo">{brand.filter((br) => br.type === 'logo')[0]?.src}</div>
+            <div className="logo">{logo && logo}</div>
 
             <div className="hamburger-icon">
                 <RxHamburgerMenu className="icon" onClick={handleHaburgerClick} />
@@ -23,6 +24,10 @@ function NavBar() {
             {isHamburgerVisible && (
                 <div className="links">
                     <ul className="nav-list">
+                        <li className='list-head'>
+                            <div className='logo'>{logo && logo}</div>
+                            <AiOutlineClose className='icon' onClick={handleHaburgerClick}/>
+                        </li>
                         <li>
                             <a href="#prodcuts">Prodcuts</a>
                         </li>
@@ -38,7 +43,7 @@ function NavBar() {
                         <li>
                             <a href="#pricing">Pricing</a>
                         </li>
-                        <li>
+                        <li className='list-btn'>
                             <button>Sign in {`>`}</button>
                         </li>
                     </ul>
