@@ -9,7 +9,6 @@
     justify-content: space-between;
     align-items: center;
     color: #fff;
-
     .logo {
         width: 8rem;
         height: 3rem;
@@ -36,8 +35,8 @@
     .links {
         position: absolute;
         top: 0;
-        right: 1000px;
-        max-width: 500px;
+        //right: 1000px;
+        width: 80vw;
         height: fit-content;
 
         display: block;
@@ -59,6 +58,19 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
+
+        & > li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5rem;
+            background-color: pink;
+
+
+            & > a {
+                width: 100%;
+            }
+        }
     }
 
     .sign-in {
@@ -68,7 +80,6 @@
 
 @media only screen and (min-width: 900px) {
     .navbar {
-
         .links {
             display: none;
         }
@@ -76,7 +87,7 @@
         .links-media {
             display: block;
         }
-        
+
         .nav-list-media {
             display: flex;
             gap: 4.5rem;
@@ -90,19 +101,17 @@
             display: none;
         }
 
-    .sign-in {
-        display: block;
-        button {
-            font-size: v.$btn-fs;
-            font-weight: v.$btn-fw;
-            letter-spacing: v.$btn-ls;
-            line-height: v.$btn-lh;
-            padding: v.$btn-p;
-            background-color: rgba(240, 240, 245, 0.2);
-            border-radius: 1.6rem;  
+        .sign-in {
+            display: block;
+            button {
+                font-size: v.$btn-fs;
+                font-weight: v.$btn-fw;
+                letter-spacing: v.$btn-ls;
+                line-height: v.$btn-lh;
+                padding: v.$btn-p;
+                background-color: rgba(240, 240, 245, 0.2);
+                border-radius: 1.6rem;
+            }
         }
-    }
-
-
     }
 }
