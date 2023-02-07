@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from 'components/navBar/NavBar';
-import Hero from 'components/Hero/Hero';
+import Hero from 'components/hero/Hero';
 import Unified from 'components/unified/Unified';
 import Terminal from 'components/terminal/Terminal';
 import Approach from 'components/approach/Approach';
