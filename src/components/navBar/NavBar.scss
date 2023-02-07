@@ -1,0 +1,108 @@
+@use '../../styles/vars' as v;
+
+.navbar {
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: v.$wrapper-max-width;
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+
+    .logo {
+        width: 8rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        .icon {
+            width: 7rem;
+            height: 7rem;
+        }
+    }
+
+    .hamburger-icon {
+        .icon {
+            width: 5rem;
+            height: 3rem;
+            padding: 5px;
+            background-color: rgba(240, 240, 245, 0.2);
+            border-radius: 2rem;
+        }
+    }
+
+    .links {
+        position: absolute;
+        top: 0;
+        right: 1000px;
+        max-width: 500px;
+        height: fit-content;
+
+        display: block;
+        padding: 1rem;
+        color: #333;
+        background-color: #fff;
+        border-radius: 1rem;
+    }
+
+    .links-media {
+        display: none;
+    }
+
+    .active {
+        right: 0;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .sign-in {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .navbar {
+
+        .links {
+            display: none;
+        }
+
+        .links-media {
+            display: block;
+        }
+        
+        .nav-list-media {
+            display: flex;
+            gap: 4.5rem;
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: 0.2px;
+            line-height: 24px;
+        }
+
+        .list-btn {
+            display: none;
+        }
+
+    .sign-in {
+        display: block;
+        button {
+            font-size: v.$btn-fs;
+            font-weight: v.$btn-fw;
+            letter-spacing: v.$btn-ls;
+            line-height: v.$btn-lh;
+            padding: v.$btn-p;
+            background-color: rgba(240, 240, 245, 0.2);
+            border-radius: 1.6rem;  
+        }
+    }
+
+
+    }
+}
