@@ -1,0 +1,286 @@
+.login {
+    padding: 3.5rem 0;
+    position: relative;
+    min-height: 100vh;
+
+    .center-lines {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        z-index: -1;
+        .lines-background {
+            position: absolute;
+            top: 0;
+            width: 80%;
+            max-width: 1000px;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                rgba(223, 223, 223, 0.781) 0 1px,
+                transparent 1px 300px,
+                rgba(223, 223, 223, 0.781) 300px 301px,
+                transparent 301px 600px,
+                rgba(223, 223, 223, 0.781) 600px 601px,
+                transparent 601px 900px,
+                rgba(223, 223, 223, 0.781) 900px 901px,
+                transparent 901px 1200px
+            );
+
+            .small {
+                position: absolute;
+                top: 60rem;
+                left: -20rem;
+                width: 20rem;
+                height: 4rem;
+                background-color: #80e9fd;
+                transform: skewY(-12deg);
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .top-background {
+        position: fixed;
+        width: 100%;
+        height: 120rem;
+        top: -70rem;
+        background-color: #f7fafc;
+        transform: skewY(-12deg);
+        z-index: -2;
+
+        .left {
+            position: absolute;
+            width: 25%;
+            height: 4rem;
+            bottom: -4rem;
+            background-color: #7a73ff;
+        }
+
+        .right {
+            position: absolute;
+            width: 25%;
+            height: 4rem;
+            right: 0;
+            bottom: 0rem;
+            background-color: #7a73ff;
+        }
+    }
+
+    &-content {
+        margin: 0 auto;
+        padding: 2rem 0;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        z-index: 1;
+    }
+
+    &__logo {
+        padding: 0 2rem;
+        width: 90%;
+        color: #3c4257;
+        margin: 1rem auto;
+    }
+
+    &__form {
+        display: flex;
+        margin: 0 auto;
+        padding: 5rem 0;
+        flex-direction: column;
+        gap: 4rem;
+        color: #3c4257;
+        width: 90%;
+        box-shadow: 0 0 40px -20px grey;
+        border-radius: 0.5rem;
+        background-color: white;
+        &-header {
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        &-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        &-field {
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        &-label {
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        &-input {
+            width: 100%;
+        }
+
+        &-remember {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 600;
+        }
+
+        &-button {
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        &-link {
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__input {
+        padding: 1.3rem 0.9rem;
+
+        border-radius: 0.5rem;
+        border: 1px solid #adadaf;
+        font-size: 1.7rem;
+        color: #3c4257;
+        &:focus {
+            outline: 0.3rem solid lightblue;
+        }
+    }
+
+    &__checked {
+        width: 1.5rem;
+        height: 1.5rem;
+
+        &:focus {
+            outline: 0.3rem solid lightblue;
+        }
+    }
+
+    &__button {
+        padding: 1.4rem 2rem;
+        width: 100%;
+        color: white;
+        font-weight: 700;
+        font-size: 1.6rem;
+        background-color: #635bff;
+        border-radius: 0.5rem;
+
+        &:focus {
+            outline: 0.3rem solid lightblue;
+        }
+    }
+
+    &__link {
+        color: rgb(63, 101, 113);
+        font-weight: 600;
+        font-size: 1.5rem;
+
+        transition-duration: 300ms;
+        &:hover {
+            color: #3c4257;
+        }
+    }
+
+    &-info {
+        max-width: 600px;
+        color: #3c4257;
+        font-size: 1.6rem;
+        .info {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+
+            &-signup {
+                width: 95%;
+                margin: 0 auto;
+                a {
+                    color: #635bff;
+                    transition-duration: 300ms;
+
+                    &:hover {
+                        color: #3c4257;
+                    }
+                }
+            }
+
+            &-description {
+                margin: 0 auto;
+                width: 95%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .info-security-tip {
+                    padding: 0.5rem 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    width: fit-content;
+                    font-size: 1.3rem;
+                    background-color: #e3e8ee;
+                    border-radius: 0.5rem;
+                    font-weight: 500;
+                }
+            }
+
+            &-question {
+                margin: 0 auto;
+                width: 95%;
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+
+                span {
+                }
+
+                button {
+                    padding: 0.5rem 2rem;
+                    box-shadow: 0 0 4px 1px grey;
+                    border-radius: 0.5rem;
+                    background-color: beige;
+                    font-weight: 550;
+                    font-size: 1.4rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                }
+
+                .icon {
+                    color: rgb(207, 207, 29);
+                }
+            }
+
+            &-brand {
+                margin: 0 auto;
+                width: 95%;
+                display: flex;
+                gap: 2rem;
+
+                a {
+                    color: #757988;
+
+                    &:hover {
+                        color: #3c4257;
+                    }
+                }
+            }
+        }
+    }
+}
