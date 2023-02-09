@@ -5,9 +5,9 @@ import './Terminal-media.scss';
 
 function Terminal() {
     return (
-        <div className="terminal">
+        <section className="terminal">
             <h1 className="terminal-title">Terminal here</h1>
-        </div>
+        </section>
     );
 }
 

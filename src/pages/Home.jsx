@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from 'components/navBar/NavBar';
 import Hero from 'components/hero/Hero';
+import Brands from 'components/brands/Brands';
 import Unified from 'components/unified/Unified';
 import Terminal from 'components/terminal/Terminal';
 import Approach from 'components/approach/Approach';
@@ -15,15 +16,16 @@ function Home() {
                 <NavBar />
             </header>
             <main>
-                    <Hero />
-                    <Unified />
-                    <Terminal />
-                    <Approach />
-                    <Scale />
-                    <More />
+                <Hero />
+                <Brands />
+                <Unified />
+                <Terminal />
+                <Approach />
+                <Scale />
+                <More />
             </main>
             <footer>
-                    <Footer />
+                <Footer />
             </footer>
         </>
     );

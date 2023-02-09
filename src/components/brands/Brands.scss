@@ -1,0 +1,15 @@
+@use '../../styles/vars' as v;
+
+.brands {
+    max-width: v.$wrapper-max-width;
+    margin: v.$wrapper-center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    justify-items: center;
+    align-items: center;
+
+    div {
+        text-align: center;
+    }
+}

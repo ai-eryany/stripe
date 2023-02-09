@@ -1,10 +1,12 @@
 @use '../../styles/vars' as v;
 
 .hero {
-    padding: 10rem 2rem;
+    padding: 2rem;
+    padding-top: 10rem;
     max-width: v.$wrapper-max-width;
     margin: v.$wrapper-center;
-    margin-block: min(35vw, 13rem);
+    margin-top: min(35vw, 13rem);
+    margin-bottom: 5rem;
     position: relative;
 
     &-title-container {
@@ -87,6 +89,7 @@
     }
 
     &-pictures {
+        display: none;
         position: absolute;
         top: 2rem;
         transform: scale(1.1);
@@ -98,7 +101,7 @@
             width: auto;
             height: auto;
             border-radius: 1.2rem;
-            box-shadow: 0 0 50px -5px grey;
+            box-shadow: 90px 90px 150px -70px grey;
             transform: scale(0.6);
         }
 
@@ -111,7 +114,15 @@
             background-color: black;
             transform: scale(0.4);
             border-radius: 7rem;
-            box-shadow: 0 0 50px -5px grey;
+            box-shadow: 0 0 200px -10px grey;
+        }
+    }
+}
+
+@media only screen and (min-width: 760px) {
+    .hero {
+        &-pictures {
+            display: block;
         }
     }
 }
