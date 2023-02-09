@@ -7,9 +7,9 @@ function Hero() {
     return (
         <div className="hero">
             <div className="title-wrapper">
-                <h1 className="title">Payments infrastructure for the internet</h1>
-                <p className="copy title__second">Payments infrastructure for the internet</p>
-                <p className="copy title__overlay">Payments infrastructure for the internet</p>
+                <h1 className="title title-main ">Payments infrastructure for the internet</h1>
+                <p className="title title__second">Payments infrastructure for the internet</p>
+                <p className="title title__overlay">Payments infrastructure for the internet</p>
             </div>
         </div>
     );

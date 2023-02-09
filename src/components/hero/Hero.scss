@@ -1,41 +1,44 @@
 @use '../../styles/vars' as v;
 
 .hero {
+    padding: 2rem;
     max-width: v.$wrapper-max-width;
     margin: v.$wrapper-center;
     height: 500px;
+    margin-block: min(35vw, 13rem);
 }
 
 .title-wrapper {
     position: relative;
-    --max-width: 90rem;
+    --max-width: 75rem;
     width: min(100% - 2rem, var(--max-width));
-    margin-inline: auto;
-    margin-block: 25rem;
 }
 
 .title {
-    line-height: 1.1;
-    font-size: 5rem;
-    max-width: 13ch;
-    mix-blend-mode: color-burn;
-    color: #555;
+    max-width: 11ch;
+    font-size: clamp(v.$hero-title-fs-min, 10vw, v.$hero-title-fs-max);
+    line-height: clamp(v.$hero-title-lh-min, 10vw, v.$hero-title-lh-max);
+    font-weight: v.$hero-title-fw;
+    letter-spacing: clamp(v.$hero-title-ls-min, 10vw, v.$hero-title-ls-max);
+    color: v.$hero-title-color;
 }
 
-.copy {
-    position: absolute;
-    top: 0;
-    left: 0;
-    line-height: 1.1;
-    font-size: 5rem;
-    max-width: 13ch;
-    font-weight: 700;
+.title-main {
+    mix-blend-mode: color-burn;
+    opacity: 0.9;
 }
 
 .title__second {
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: -4;
+    opacity: 0.5;
 }
 
 .title__overlay {
-    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
 }

@@ -118,4 +118,8 @@ input {
   height: 100%;
 }
 
+main {
+  overflow: hidden;
+}
+
 /*# sourceMappingURL=index.css.map */
