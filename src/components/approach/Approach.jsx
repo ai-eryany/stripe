@@ -5,9 +5,9 @@ import './Approach-media.scss';
 
 function Approach() {
     return (
-        <div>
+        <section>
             <h1>Approach here</h1>
-        </div>
+        </section>
     );
 }
 

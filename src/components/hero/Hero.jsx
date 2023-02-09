@@ -7,7 +7,7 @@ import './Hero-media.scss';
 
 function Hero() {
     return (
-        <div className="hero">
+        <section className="hero">
             <div className="hero-title-container">
                 <h1 className="title title-main ">
                     Payments infrastructure <br />
@@ -25,9 +25,9 @@ function Hero() {
 
             <div className="hero-desc-container">
                 <p className="desc">
-                    Millions of businesses of all sizes—from startups to large enterprises—use
-                    Stripe’s software and APIs to accept payments, send payouts, and manage their
-                    businesses online.
+                    Millions of businesses of all sizes—from startups to large
+                    enterprises—use Stripe’s software and APIs to accept
+                    payments, send payouts, and manage their businesses online.
                 </p>
             </div>
 
@@ -40,7 +40,7 @@ function Hero() {
                 <img className="desktop" src={desktop} alt="desktop" />
                 <img className="phone" src={phone} alt="phone" />
             </div>
-        </div>
+        </section>
     );
 }
 
