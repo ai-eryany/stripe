@@ -8,6 +8,7 @@
     margin-top: min(35vw, 13rem);
     margin-bottom: 5rem;
     position: relative;
+    display: flex;
 
     &-title-container {
         position: relative;
@@ -90,14 +91,12 @@
 
     &-pictures {
         display: none;
-        position: absolute;
-        top: 2rem;
         transform: scale(1.1);
 
         .desktop {
             position: absolute;
             top: -25rem;
-            left: 50rem;
+            left: -40rem;
             width: auto;
             height: auto;
             border-radius: 1.2rem;
@@ -108,21 +107,13 @@
         .phone {
             position: absolute;
             top: -40rem;
-            left: 50rem;
+            left: -40rem;
             width: auto;
             height: auto;
             background-color: black;
             transform: scale(0.4);
             border-radius: 7rem;
             box-shadow: 0 0 200px -10px grey;
-        }
-    }
-}
-
-@media only screen and (min-width: 760px) {
-    .hero {
-        &-pictures {
-            display: block;
         }
     }
 }

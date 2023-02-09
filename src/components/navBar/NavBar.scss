@@ -35,12 +35,15 @@
     .links {
         position: absolute;
         top: 1rem;
-        width: 95vw;
+        right: 2rem;
+        left: 2rem;
+        // width: 95vw;
         height: 600px;
         display: block;
         color: #333;
         border-radius: 1rem;
-        background-color: #fff; 
+        background-color: #fff;
+        box-shadow: 0 0 200px -10px grey;
         z-index: 1;
     }
 
@@ -101,8 +104,8 @@
                 font-size: v.$btn-fs;
                 letter-spacing: v.$btn-ls;
                 line-height: v.$btn-lh;
-                border-radius: v.$btn-br;            
-                background-color: v.$light-purple; 
+                border-radius: v.$btn-br;
+                background-color: v.$light-purple;
                 color: #fff;
             }
         }
@@ -115,7 +118,6 @@
 
 @media only screen and (min-width: 900px) {
     .navbar {
-
         .hamburger-icon {
             display: none;
         }
