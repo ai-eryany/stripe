@@ -1,3 +1,5 @@
+@use '../../styles/vars' as v;
+
 @media only screen and (min-width: 600px) {
     .pictures {
         position: static;
