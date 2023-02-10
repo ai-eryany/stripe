@@ -2,7 +2,8 @@
 
 .brands {
     max-width: v.$wrapper-max-width;
-    margin: v.$wrapper-center;
+    margin-inline: v.$wrapper-center;
+    margin-block: 10rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;

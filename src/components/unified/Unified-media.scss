@@ -1,0 +1,19 @@
+@media only screen and (min-width: 600px) {
+    .unified {
+        &-title {
+            h2 {
+                max-width: 55%;
+            }
+        }
+
+        &-content {
+            column-count: 2;
+            column-gap: 5rem;
+        }
+
+        &-desc {
+            margin: 0;
+            break-inside: avoid;
+        }
+    }
+}

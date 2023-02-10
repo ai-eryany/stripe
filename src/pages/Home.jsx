@@ -3,6 +3,7 @@ import NavBar from 'components/navBar/NavBar';
 import Hero from 'components/hero/Hero';
 import Brands from 'components/brands/Brands';
 import Unified from 'components/unified/Unified';
+import Pictures from 'components/pictures/Pictures';
 import Terminal from 'components/terminal/Terminal';
 import Approach from 'components/approach/Approach';
 import Scale from 'components/scale/Scale';
@@ -19,10 +20,11 @@ function Home() {
                 <Hero />
                 <Brands />
                 <Unified />
+                <Pictures />
                 <Terminal />
                 <Approach />
-                <Scale />
-                <More />
+                {/* <Scale /> */}
+                {/* <More /> */}
             </main>
             <footer>
                 <Footer />

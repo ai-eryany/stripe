@@ -23,7 +23,7 @@
         line-height: clamp(v.$hero-title-lh-min, 10vw, v.$hero-title-lh-max);
         font-weight: v.$hero-title-fw;
         letter-spacing: clamp(v.$hero-title-ls-min, 10vw, v.$hero-title-ls-max);
-        color: v.$hero-title-color;
+        color: v.$dark-blue;
         break-inside: break;
     }
 
