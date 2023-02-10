@@ -2,11 +2,12 @@
 
 @media only screen and (min-width: 600px) {
     .pictures {
-        position: static;
-        gap: 5rem;
+        padding-inline: 2rem;
+        top: -15rem;
+        gap: 3rem;
         margin-inline: v.$wrapper-center;
         margin-top: 5rem;
-        transform: scale(1);
+        transform: scale(0.8);
         div {
         }
 
