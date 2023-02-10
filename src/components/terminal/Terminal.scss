@@ -1,0 +1,69 @@
+@use '../../styles/vars' as v;
+
+.terminal {
+    max-width: v.$wrapper-max-width;
+    margin-inline: v.$wrapper-center;
+
+    &-background {
+        position: absolute;
+        left: 0;
+        width: 100vw;
+        height: 110rem;
+        background-color: v.$blue-bg;
+        transform: skewY(-7deg);
+        translate: 0 -55%;
+        .short {
+        }
+
+        .tall {
+        }
+    }
+
+    &-content {
+        isolation: isolate;
+        translate: 0 -30%;
+    }
+
+    &-head {
+        color: v.$light-cyan;
+        font-size: v.$head-fs;
+        font-weight: v.$head-fw;
+        letter-spacing: v.$head-ls;
+        line-height: v.$head-lh;
+    }
+
+    &-title {
+        color: #fff;
+        font-size: clamp(v.$sec-title-fs-min, 10vw, v.$sec-title-fs-max);
+        font-weight: v.$sec-title-fw;
+        letter-spacing: clamp(v.$sec-title-ls-min, 10vw, v.$sec-title-ls-max);
+        line-height: clamp(v.$sec-title-lh-min, 10vw, v.$sec-title-lh-max);
+    }
+
+    &-desc {
+        color: v.$lighter-grey;
+        font-size: v.$desc-fs;
+        font-weight: v.$desc-fw;
+        letter-spacing: v.$desc-ls;
+        line-height: v.$desc-lh;
+    }
+
+    &-btn {
+        padding: v.$btn-p;
+        color: #fff;
+        font-size: v.$btn-fs;
+        font-weight: v.$btn-fw;
+        letter-spacing: v.$btn-ls;
+        line-height: v.$btn-lh;
+        border-radius: v.$btn-br;
+        background-color: v.$light-cyan;
+    }
+
+    &-pic {
+        transform: scale(0.8);
+        img {
+            width: auto;
+            height: auto;
+        }
+    }
+}
