@@ -5,6 +5,7 @@ import './styles/css/index.css';
 
 function App() {
     const routers = createBrowserRouter(AppRoutes);
+
     return (
         <React.StrictMode>
             <RouterProvider router={routers} />
