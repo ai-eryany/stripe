@@ -1,4 +1,62 @@
+@use '../../styles/vars' as v;
+
 .unified {
+    padding: 2rem;
+    max-width: v.$wrapper-max-width;
+    margin-inline: v.$wrapper-center;
+    margin-top: 15rem;
+
+    &-head {
+        display: block;
+        color: v.$light-purple;
+        font-size: v.$head-fs;
+        font-weight: v.$head-fw;
+        letter-spacing: v.$head-ls;
+        line-height: v.$head-lh;
+        margin-bottom: 4rem;
+    }
+
     &-title {
+        h2 {
+            margin-block: 4rem;
+            color: v.$dark-blue;
+            font-size: clamp(v.$sec-title-fs-min, 10vw, v.$sec-title-fs-max);
+            font-weight: v.$sec-title-fw;
+            letter-spacing: clamp(
+                v.$sec-title-ls-min,
+                10vw,
+                v.$sec-title-ls-max
+            );
+            line-height: clamp(v.$sec-title-lh-min, 10vw, v.$sec-title-lh-max);
+        }
+    }
+
+    &-content {
+        margin-block: 4rem;
+    }
+
+    &-desc {
+        margin-block: 2rem;
+        color: v.$light-grey;
+        font-size: v.$desc-fs;
+        font-weight: v.$desc-fw;
+        letter-spacing: v.$desc-ls;
+        line-height: v.$desc-lh;
+
+        a {
+            color: v.$light-purple;
+            font-weight: v.$link-fw;
+        }
+    }
+
+    &-btn {
+        padding: v.$btn-p;
+        color: #fff;
+        font-size: v.$btn-fs;
+        font-weight: v.$btn-fw;
+        letter-spacing: v.$btn-ls;
+        line-height: v.$btn-lh;
+        border-radius: v.$btn-br;
+        background-color: v.$light-purple;
     }
 }

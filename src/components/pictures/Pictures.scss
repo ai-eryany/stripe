@@ -1,0 +1,64 @@
+@use '../../styles/vars' as v;
+
+.pictures {
+    position: relative;
+    left: -7rem;
+    top: -15rem;
+    max-width: v.$wrapper-max-width;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+
+    transform: scale(0.6);
+    div {
+    }
+
+    img {
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        box-shadow: 0 0 40px -5px grey;
+    }
+
+    .visa {
+        img {
+            border-radius: 2rem;
+        }
+    }
+
+    .invoice {
+        img {
+            border-radius: 1rem;
+        }
+    }
+
+    .terminal {
+        position: relative;
+        top: -10rem;
+
+        img {
+            border-radius: 4.5rem;
+        }
+    }
+
+    .phone {
+        justify-self: flex-end;
+        position: relative;
+        top: -30rem;
+
+        img {
+            border-radius: 5rem;
+        }
+    }
+
+    .fraud {
+        position: relative;
+        top: -10rem;
+        grid-column: span 2;
+
+        img {
+            width: 100%;
+            border-radius: 1rem;
+        }
+    }
+}

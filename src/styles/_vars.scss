@@ -1,24 +1,24 @@
 // basics --------------------
 $wrapper-max-width: 1080px;
-$wrapper-center: 0 auto;
+$wrapper-center: auto;
 
 $grey-bg: #f6f9fc;
 $blue-bg: #0e2540;
 
-$dark-blue: #0a2540;
+$dark-blue: #0e2540;
 
 $light-cyan: #00d4ff;
 $light-grey: #425466;
 $light-purple: #635bff;
 
 $head-fs: 18px;
-$head-fw: 500;
+$head-fw: 700;
 $head-ls: 0.2px;
 $head-lh: 28px;
 
 $sec-title-fs-max: 38px;
 $sec-title-fs-min: 34px;
-$sec-title-fw: 500;
+$sec-title-fw: 700;
 $sec-title-ls-max: -0.2px;
 $sec-title-ls-min: -0.1px;
 $sec-title-lh-max: 48px;
@@ -36,19 +36,18 @@ $info-lh: 24px;
 $info-p: 0px 32px 0px 16px;
 
 $btn-fs: 15px;
-$btn-fw: 600;
+$btn-fw: 500;
 $btn-ls: 0.2px;
 $btn-lh: 24px;
 $btn-p: 6px 16px 6px 16px;
 $btn-br: 16px;
 
-$link-fw: 425;
+$link-fw: 525;
 
 // nav vars ----------------------
 
 // hero vars ---------------------
 $hero-bg-color: #ffffff;
-$hero-title-color: #131439;
 $hero-title-fs-max: 94px;
 $hero-title-fs-min: 40px;
 $hero-title-fw: 700;
