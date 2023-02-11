@@ -6,6 +6,7 @@ import './styles/css/index.css';
 
 const run = () => {
     const container = document.querySelector('#root');
+    //@ts-ignore
     container.dataset.theme = 'light';
 
     const root = createRoot(container);

@@ -1,7 +1,7 @@
 import React from 'react';
 import visa from '../../assets/images/visa.png';
 import invoice from '../../assets/images/invoice.png';
-import terminal from '../../assets/images/terminal.png';
+import payment from '../../assets/images/terminal.png';
 import phone from '../../assets/images/phone2.png';
 import fraud from '../../assets/images/fraud.webp';
 
@@ -19,8 +19,8 @@ function Pictures() {
                 <img src={invoice} alt="invoice" />
             </div>
 
-            <div className="terminal">
-                <img src={terminal} alt="terminal" />
+            <div className="payment">
+                <img src={payment} alt="payment" />
             </div>
 
             <div className="phone">

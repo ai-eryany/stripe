@@ -1,0 +1,34 @@
+@media only screen and (min-width: 500px) {
+    .terminal {
+        translate: 0 -35%;
+        &-details {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media only screen and (min-width: 860px) {
+    .terminal {
+        translate: 0 -50%;
+        padding-block: 10rem;
+
+        &-upper {
+            display: flex;
+            justify-content: space-between;
+            gap: 10rem;
+        }
+
+        &-title {
+            max-width: 20ch;
+        }
+
+        &-desc {
+            max-width: 50ch;
+        }
+
+        &-details {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 0;
+        }
+    }
+}
