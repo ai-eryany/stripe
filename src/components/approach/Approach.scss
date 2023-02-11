@@ -1,0 +1,80 @@
+@use '../../styles/vars' as v;
+
+.approach {
+    padding: 2rem;
+    max-width: v.$wrapper-max-width;
+    margin-inline: v.$wrapper-center;
+    height: fit-content;
+    translate: 0 -40%;
+
+    &-head {
+        margin-bottom: 4rem;
+        display: block;
+        color: v.$light-purple;
+        font-size: v.$head-fs;
+        font-weight: v.$head-fw;
+        letter-spacing: v.$head-ls;
+        line-height: v.$head-lh;
+    }
+
+    &-title {
+        h2 {
+            max-width: 25ch;
+            color: v.$dark-blue;
+            font-size: clamp(v.$sec-title-fs-min, 10vw, v.$sec-title-fs-max);
+            font-weight: v.$sec-title-fw;
+            letter-spacing: clamp(
+                v.$sec-title-ls-min,
+                10vw,
+                v.$sec-title-ls-max
+            );
+            line-height: clamp(v.$sec-title-lh-min, 10vw, v.$sec-title-lh-max);
+        }
+    }
+
+    &-details {
+        margin-inline: auto;
+        margin-block: 6rem;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .anim {
+            margin-left: 2rem;
+            justify-self: flex-start;
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            align-items: center;
+            img {
+                width: auto;
+                object-fit: cover;
+            }
+        }
+
+        .head {
+            color: v.$dark-blue;
+            padding: v.$info-p;
+            font-size: v.$info-fs;
+            font-weight: v.$info-fw;
+            letter-spacing: v.$info-ls;
+            line-height: v.$info-lh;
+        }
+
+        .desc {
+            color: v.$light-grey;
+            padding: v.$info-p;
+            font-size: v.$info-fs;
+            font-weight: 450;
+            letter-spacing: v.$info-ls;
+            line-height: v.$info-lh;
+        }
+    }
+}
