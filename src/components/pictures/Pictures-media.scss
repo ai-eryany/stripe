@@ -2,13 +2,16 @@
 
 @media only screen and (min-width: 1000px) {
     .pictures {
-        padding-inline: 2rem;
-        top: -19rem;
-        left: -15rem;
-        gap: 3rem;
-        margin-inline: v.$wrapper-center;
-        margin-top: 5rem;
-        transform: scale(0.7);
+        &-wrapper {
+            padding-inline: 2rem;
+            top: -19rem;
+            left: -15rem;
+            gap: 3rem;
+            margin-inline: v.$wrapper-center;
+            padding-top: 5rem;
+            transform: scale(0.7);
+        }
+
         div {
         }
 
