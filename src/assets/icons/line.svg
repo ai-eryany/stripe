@@ -1,0 +1,17 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="AnimatedIcon__icon" width="96" height="96" preserveAspectRatio="xMinYMin" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" data-js-controller="HealthIcon">
+      <defs>
+      <circle id="healthIconCircle" cx="35" cy="49" r="19"></circle>
+      <path id="healthIconCheck" d="M47 28a9 9 0 1 1 0 18 9 9 0 0 1 0-18zm3.94 4.73L45 38.78 43.43 37a.83.83 0 0 0-1.3 1L44 41.2a1 1 0 0 0 1.7 0c.3-.41 6-7.57 6-7.57.75-.8-.16-1.51-.76-.9z"></path>
+      <clipPath id="healthIconLineClipPath">
+        <circle cx="35" cy="49" r="17"></circle>
+      </clipPath>
+      <clipPath id="healthIconCircleClipPath">
+        <use href="#healthIconCircle"></use>
+      </clipPath>
+    <circle id="healthIconCircle" cx="35" cy="49" r="19"></circle><circle id="healthIconCircle" cx="35" cy="49" r="19"></circle><path id="healthIconCheck" d="M47 28a9 9 0 1 1 0 18 9 9 0 0 1 0-18zm3.94 4.73L45 38.78 43.43 37a.83.83 0 0 0-1.3 1L44 41.2a1 1 0 0 0 1.7 0c.3-.41 6-7.57 6-7.57.75-.8-.16-1.51-.76-.9z"></path><path id="healthIconCheck" d="M47 28a9 9 0 1 1 0 18 9 9 0 0 1 0-18zm3.94 4.73L45 38.78 43.43 37a.83.83 0 0 0-1.3 1L44 41.2a1 1 0 0 0 1.7 0c.3-.41 6-7.57 6-7.57.75-.8-.16-1.51-.76-.9z"></path></defs>
+
+    <use href="#healthIconCircle" fill="#80E9FF"></use>
+    <path class="HealthIcon__line" d="M16 53h6l2.5-6L29 59l5-20.5L37 53l19 .09" clip-path="url(#healthIconLineClipPath)" data-js-target="HealthIcon.line" stroke="#FFFFFF" fill="none" stroke-width="2px"></path>
+    <use class="HealthIcon__check" href="#healthIconCheck" fill="#7A73FF" data-js-target-list="HealthIcon.checks"></use>
+    <use class="HealthIcon__check" href="#healthIconCheck" fill="#0048E5" clip-path="url(#healthIconCircleClipPath)" data-js-target-list="HealthIcon.checks"></use>
+    </svg>
