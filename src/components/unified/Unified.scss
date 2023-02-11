@@ -7,13 +7,13 @@
     margin-top: 15rem;
 
     &-head {
+        margin-bottom: 4rem;
         display: block;
         color: v.$light-purple;
         font-size: v.$head-fs;
         font-weight: v.$head-fw;
         letter-spacing: v.$head-ls;
         line-height: v.$head-lh;
-        margin-bottom: 4rem;
     }
 
     &-title {

@@ -1,30 +1,47 @@
 @use '../../styles/vars' as v;
 
 .terminal {
-    max-width: v.$wrapper-max-width;
-    margin-inline: v.$wrapper-center;
+    --skew: 7deg;
+    --skew-bg: calc(var(--skew) * -1);
+    padding-block: 2rem;
+    height: fit-content;
+    background-color: v.$blue-bg;
+    transform: skewY(var(--skew-bg));
+    position: relative;
+    translate: 0 -30%;
 
-    &-background {
+    .short {
+        width: 15rem;
+        height: 4rem;
         position: absolute;
-        left: 0;
-        width: 100vw;
-        height: 110rem;
-        background-color: v.$blue-bg;
-        transform: skewY(-7deg);
-        translate: 0 -55%;
-        .short {
-        }
+        left: 15rem;
+        bottom: -3rem;
+        background-color: v.$light-purple;
+        mix-blend-mode: multiply;
+        opacity: 0.9;
+    }
 
-        .tall {
-        }
+    .tall {
+        width: 30%;
+        height: 4rem;
+        position: absolute;
+        right: 0;
+        bottom: -4rem;
+        background-color: v.$light-cyan;
     }
 
     &-content {
-        isolation: isolate;
-        translate: 0 -30%;
+        margin-block: 4rem;
+        padding-inline: 2rem;
+        padding-block: 4rem;
+        transform: skewY(var(--skew));
+        max-width: v.$wrapper-max-width;
+        margin-inline: v.$wrapper-center;
     }
 
     &-head {
+        margin-bottom: 2rem;
+        display: block;
         color: v.$light-cyan;
         font-size: v.$head-fs;
         font-weight: v.$head-fw;
@@ -33,6 +50,7 @@
     }
 
     &-title {
+        margin-block: 2rem;
         color: #fff;
         font-size: clamp(v.$sec-title-fs-min, 10vw, v.$sec-title-fs-max);
         font-weight: v.$sec-title-fw;
@@ -41,6 +59,7 @@
     }
 
     &-desc {
+        margin-block: 2rem;
         color: v.$lighter-grey;
         font-size: v.$desc-fs;
         font-weight: v.$desc-fw;
@@ -49,8 +68,9 @@
     }
 
     &-btn {
+        margin-block: 2rem;
         padding: v.$btn-p;
-        color: #fff;
+        color: v.$dark-blue;
         font-size: v.$btn-fs;
         font-weight: v.$btn-fw;
         letter-spacing: v.$btn-ls;
@@ -60,10 +80,86 @@
     }
 
     &-pic {
-        transform: scale(0.8);
+        max-width: 50rem;
+        max-height: 50rem;
+        overflow: hidden;
+        margin: 0 auto;
+        border-radius: 1rem;
         img {
             width: auto;
             height: auto;
+            object-fit: cover;
+        }
+    }
+
+    &-details {
+        margin-inline: auto;
+        margin-block: 6rem;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        .box {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .anim {
+            margin-left: 2rem;
+            justify-self: flex-start;
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            align-items: center;
+            img {
+                width: auto;
+                object-fit: cover;
+            }
+        }
+
+        .shrid {
+            margin-left: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 7rem;
+            height: 4rem;
+            overflow: hidden;
+            img {
+                width: 10rem;
+                height: 10rem;
+            }
+        }
+
+        .head {
+            color: #fff;
+            padding: v.$info-p;
+            font-size: v.$info-fs;
+            font-weight: v.$info-fw;
+            letter-spacing: v.$info-ls;
+            line-height: v.$info-lh;
+        }
+
+        .desc {
+            // max-width:
+            color: v.$lighter-grey;
+            padding: v.$info-p;
+            font-size: v.$info-fs;
+            font-weight: 450;
+            letter-spacing: v.$info-ls;
+            line-height: v.$info-lh;
+        }
+
+        .btn {
+            align-self: flex-start;
+            color: v.$light-cyan;
+            padding: v.$btn-p;
+            font-size: v.$btn-fs;
+            font-weight: v.$btn-fw;
+            letter-spacing: v.$btn-ls;
+            line-height: v.$btn-lh;
+            border-radius: v.$btn-br;
         }
     }
 }
