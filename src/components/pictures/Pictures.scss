@@ -1,15 +1,18 @@
 @use '../../styles/vars' as v;
 
 .pictures {
-    position: relative;
-    left: -7rem;
-    top: -20rem;
-    max-width: v.$wrapper-max-width;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    background-color: v.$grey-bg;
+    &-wrapper {
+        position: relative;
+        left: -5rem;
+        top: -20rem;
+        max-width: v.$wrapper-max-width;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        transform: scale(0.6);
+    }
 
-    transform: scale(0.6);
     div {
     }
 

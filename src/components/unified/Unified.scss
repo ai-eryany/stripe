@@ -1,10 +1,14 @@
 @use '../../styles/vars' as v;
 
 .unified {
-    padding: 2rem;
-    max-width: v.$wrapper-max-width;
-    margin-inline: v.$wrapper-center;
-    margin-top: 15rem;
+    background-color: v.$grey-bg;
+    padding-top: 1px;
+    &-wrapper {
+        padding: 2rem;
+        max-width: v.$wrapper-max-width;
+        margin-inline: v.$wrapper-center;
+        margin-top: 15rem;
+    }
 
     &-head {
         margin-bottom: 4rem;
