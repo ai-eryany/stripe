@@ -1,11 +1,18 @@
 @use '../../styles/vars' as v;
 
 .approach {
-    padding: 2rem;
-    max-width: v.$wrapper-max-width;
-    margin-inline: v.$wrapper-center;
-    height: fit-content;
     translate: 0 -40%;
+    transform: skewY(-7deg);
+    position: relative;
+    padding: 1px;
+
+    &-content {
+        padding: 2rem;
+        max-width: v.$wrapper-max-width;
+        margin-inline: v.$wrapper-center;
+        height: fit-content;
+        transform: skewY(7deg);
+    }
 
     &-head {
         margin-bottom: 4rem;
