@@ -15,13 +15,21 @@ function Footer() {
     const brand = useBrand((state) => state.brand);
     const products = useProducts((state) => state.products);
     const solutions = useSolutions((state) => state.solutions);
-    const customSolutions = useCustomSolutions((state) => state.customSolutions);
+    const customSolutions = useCustomSolutions(
+        (state) => state.customSolutions
+    );
     const developers = useDevelopers((state) => state.developers);
     const resources = useResources((state) => state.resources);
     const company = useCompany((state) => state.company);
 
     return (
-        <section className="footer">
+        <footer className="footer">
+            <div className="tall-left">
+                <div className="short-left"></div>
+            </div>
+            <div className="tall-right">
+                <div className="short-right"></div>
+            </div>
             <div className="footer-content">
                 <div className="footer-content__brand">
                     <div className="footer-content__brand-logo">
@@ -88,7 +96,9 @@ function Footer() {
                                 {products.map((product) => {
                                     return (
                                         <li key={nanoid()}>
-                                            <a href={product.href}>{product.name}</a>
+                                            <a href={product.href}>
+                                                {product.name}
+                                            </a>
                                         </li>
                                     );
                                 })}
@@ -100,7 +110,10 @@ function Footer() {
                                 {solutions.map((solution) => {
                                     return (
                                         <li key={nanoid()}>
-                                            <a href={solution.href}> {solution.name} </a>
+                                            <a href={solution.href}>
+                                                {' '}
+                                                {solution.name}{' '}
+                                            </a>
                                         </li>
                                     );
                                 })}
@@ -112,7 +125,9 @@ function Footer() {
                                 {customSolutions.map((custom) => {
                                     return (
                                         <li key={nanoid()}>
-                                            <a href={custom.href}>{custom.name}</a>
+                                            <a href={custom.href}>
+                                                {custom.name}
+                                            </a>
                                         </li>
                                     );
                                 })}
@@ -124,7 +139,9 @@ function Footer() {
                                 {developers.map((developer) => {
                                     return (
                                         <li key={nanoid()}>
-                                            <a href={developer.href}>{developer.name}</a>
+                                            <a href={developer.href}>
+                                                {developer.name}
+                                            </a>
                                         </li>
                                     );
                                 })}
@@ -136,7 +153,9 @@ function Footer() {
                                 {resources.map((resource) => {
                                     return (
                                         <li key={nanoid()}>
-                                            <a href={resource.href}>{resource.name}</a>
+                                            <a href={resource.href}>
+                                                {resource.name}
+                                            </a>
                                         </li>
                                     );
                                 })}
@@ -157,7 +176,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-        </section>
+        </footer>
     );
 }
 

@@ -1,59 +1,50 @@
 import React from 'react';
-import Tag from '../../assets/icons/tag.png';
-import Code from '../../assets/icons/code.png';
+import tag from '../../assets/icons/tag.svg';
+import code from '../../assets/icons/code.svg';
+
+import './More.scss';
+import './More-media.scss';
 
 function More() {
     return (
         <section className="more">
-            <div className="more-background">
-                <div className="left-small"></div>
-                <div className="left-big"></div>
-                <div className="right-small"></div>
-                <div className="right-big"></div>
-            </div>
-
             <div className="more-content">
-                <div className="more-content-start">
-                    <h2 className="more-content-start__title">
-                        Ready to get started?
-                    </h2>
-                    <p className="more-content-start__des">
-                        Explore{' '}
-                        <a href="#link" className="inline-link">
-                            Stripe Payments
-                        </a>
-                        , or create an account instantly and start accepting
-                        payments. You can also contact us to design a custom
-                        package for your business.
-                    </p>
-                    <div className="more-content-start__buttons">
-                        <button>Start now</button>
-                        <button>Contact sales</button>
+                <div className="more-text">
+                    <div className="more-title">
+                        <h3>Ready to get started?</h3>
                     </div>
+                    <p className="more-desc">
+                        Explore Stripe Payments, or create an account instantly
+                        and start accepting payments. You can also contact us to
+                        design a custom package for your business.
+                    </p>
+                    <button className="more-btn">Start now &gt;</button>
+                    <button className="more-btn">Contact Sales &gt;</button>
                 </div>
-                <div className="more-content-widgets">
-                    <div className="more-content-widgets-details">
-                        <img src={Tag} alt="" />
-                        <img src={Tag} alt="" />
-                        <h5>Always know what you pay</h5>
-                        <p>
+
+                <div className="more-details">
+                    <div className="box">
+                        <div className="anim">
+                            <img src={tag} alt="" />
+                        </div>
+                        <h4 className="head">Always know what you pay</h4>
+                        <p className="desc">
                             Integrated per-transaction pricing with no hidden
                             fees.
                         </p>
-                        <a href="#link" className="inline-link">
-                            Pricing details
-                        </a>
+                        <button className="btn">Pricing details &gt;</button>
                     </div>
-                    <div className="more-content-widgets-reference">
-                        <img src={Code} alt="" />
-                        <h5>Start your integration</h5>
-                        <p>
+
+                    <div className="box">
+                        <div className="anim">
+                            <img src={code} alt="" />
+                        </div>
+                        <h4 className="head">Start your integration</h4>
+                        <p className="desc">
                             Get up and running with Stripe in as little as 10
                             minutes.
                         </p>
-                        <a href="#link" className="inline-link">
-                            API reference
-                        </a>
+                        <button className="btn">API reference &gt;</button>
                     </div>
                 </div>
             </div>

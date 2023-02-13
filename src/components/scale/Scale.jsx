@@ -11,9 +11,7 @@ function Scale() {
                     <div className="short"></div>
                 </div>
             </div>
-            {/* <div className="globe-container">
-                <div id="globe"></div>
-            </div> */}
+
             <div className="scale-content">
                 <span className="scale-head">Global scale</span>
 

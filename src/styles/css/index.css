@@ -103,4 +103,8 @@ main {
   overflow: hidden;
 }
 
+footer {
+  transform: skewY(-7deg);
+}
+
 /*# sourceMappingURL=index.css.map */
