@@ -1,0 +1,112 @@
+@use '../../styles/vars' as v;
+
+.more {
+    padding: 1px;
+    position: relative;
+    transform: skewY(-7deg);
+    z-index: 10;
+
+    &-content {
+        transform: skewY(7deg);
+        padding: 2rem;
+        max-width: v.$wrapper-max-width;
+        margin-inline: v.$wrapper-center;
+        margin-block: 5rem;
+        translate: 0 -50%;
+    }
+
+    &-text {
+    }
+
+    &-title {
+        h3 {
+            margin-block: 2rem;
+            color: v.$dark-blue;
+            font-size: clamp(v.$sec-title-fs-min, 10vw, v.$sec-title-fs-max);
+            font-weight: v.$sec-title-fw;
+            letter-spacing: clamp(
+                v.$sec-title-ls-min,
+                10vw,
+                v.$sec-title-ls-max
+            );
+            line-height: clamp(v.$sec-title-lh-min, 10vw, v.$sec-title-lh-max);
+        }
+    }
+
+    &-desc {
+        // margin-block: 2rem;
+        color: v.$light-grey;
+        font-size: v.$desc-fs;
+        font-weight: v.$desc-fw;
+        letter-spacing: v.$desc-ls;
+        line-height: v.$desc-lh;
+    }
+
+    &-btn {
+        margin-block: 2rem;
+        padding: v.$btn-p;
+        color: #fff;
+        font-size: v.$btn-fs;
+        font-weight: v.$btn-fw;
+        letter-spacing: v.$btn-ls;
+        line-height: v.$btn-lh;
+        border-radius: v.$btn-br;
+        background-color: v.$light-purple;
+    }
+
+    &-btn:nth-of-type(2) {
+        color: v.$light-purple;
+        background: none;
+    }
+
+    &-details {
+        margin-inline: auto;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        .box {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .anim {
+            justify-self: flex-start;
+            display: flex;
+            width: 5rem;
+            align-items: center;
+            img {
+                width: 10rem;
+                object-fit: cover;
+            }
+        }
+
+        .head {
+            color: v.$dark-blue;
+            font-size: v.$info-fs;
+            font-weight: v.$info-fw;
+            letter-spacing: v.$info-ls;
+            line-height: v.$info-lh;
+        }
+
+        .desc {
+            color: v.$light-grey;
+            font-size: v.$info-fs;
+            font-weight: 450;
+            letter-spacing: v.$info-ls;
+            line-height: v.$info-lh;
+        }
+
+        .btn {
+            align-self: flex-start;
+            color: v.$light-purple;
+            padding: v.$btn-p;
+            font-size: v.$btn-fs;
+            font-weight: v.$btn-fw;
+            letter-spacing: v.$btn-ls;
+            line-height: v.$btn-lh;
+            border-radius: v.$btn-br;
+        }
+    }
+}

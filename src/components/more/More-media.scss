@@ -1,0 +1,21 @@
+@media only screen and (min-width: 500px) {
+    .more {
+        &-details {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .more {
+        &-content {
+            display: flex;
+            align-items: center;
+            gap: 10rem;
+        }
+
+        &-desc {
+            max-width: 60ch;
+        }
+    }
+}

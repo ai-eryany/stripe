@@ -2,17 +2,55 @@
 
 .footer {
     position: relative;
-    background-color: #f5f9fc;
+    background-color: v.$grey-bg;
+    padding: 1px;
+    .tall-right {
+        width: 30%;
+        height: 4rem;
+        position: absolute;
+        right: 0;
+        top: -4rem;
+        background-color: v.$light-cyan;
+        .short-right {
+            width: 15rem;
+            height: 4rem;
+            position: absolute;
+            left: 15rem;
+            bottom: -3rem;
+            background-color: v.$light-purple;
+            mix-blend-mode: multiply;
+            opacity: 0.9;
+        }
+    }
+
+    .tall-left {
+        width: 30%;
+        height: 4rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: v.$light-purple;
+        .short-left {
+            width: 15rem;
+            height: 4rem;
+            position: absolute;
+            right: 8rem;
+            top: -3rem;
+            mix-blend-mode: multiply;
+            background-color: v.$light-cyan;
+            opacity: 0.9;
+        }
+    }
 
     &-content {
+        transform: skewY(7deg);
         max-width: v.$wrapper-max-width;
         margin-inline: v.$wrapper-center;
-        padding-block: 5rem;
+        padding-block: 10rem;
         padding-inline: 1rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
-
         &__brand {
             padding-inline: 1rem;
             display: flex;
