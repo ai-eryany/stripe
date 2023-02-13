@@ -25,8 +25,8 @@ function Home() {
                 <Approach />
                 <Scale />
                 <More />
+                <Footer />
             </main>
-            <Footer />
         </>
     );
 }
